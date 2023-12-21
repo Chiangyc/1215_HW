@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Guessing</h1>
+    <h1>猜數字遊戲</h1>
+
+    <script>
+        var rand = Math.floor((Math.random() * 10) + 1);
+        var correctNumber = false;
+
+        while (!correctNumber) {
+            var userGuess = parseInt(prompt("請輸入一個介於1到10的數字："));
+
+            if (userGuess === rand) {
+                alert("恭喜你答對了 遊戲結束！");
+                correctNumber = true;
+            } else {
+                alert("你答錯了 再猜一次吧！");
+            }
+        }
+    </script>
+</body>
+</html>
